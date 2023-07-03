@@ -1,13 +1,21 @@
-import { HelloWorld } from "../src/components/HelloWorld";
 import "../public/css/styles.css";
 import React from "react";
+import Head from "next/head";
+import type { AppProps } from "next/app";
 
-function HomePage() {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <React.StrictMode>
-      <HelloWorld />
-    </React.StrictMode>
+    <>
+      <Head>
+        <title>Volvo Cars</title>
+        <meta name="keywords" content="Volvo, Cars"></meta>
+        <meta
+          name="description"
+          content="Volvo Cars (Global Online Digital)"
+        ></meta>
+      </Head>
+      <Component {...pageProps} />
+    </>
   );
 }
-
-export default HomePage;
+export default MyApp;
