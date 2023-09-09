@@ -14,7 +14,7 @@ export const Scroll = ({ cars }: ScrollProps) => {
             key={car.id}
             src={car.imageUrl}
             alt={car.modelName}
-            className="min-w-[147px] max-w-[147px] h[200px] cursor-pointer transition-opacity transition-transform duration-500 ease-linear"
+            className="min-w-[147px] max-w-[147px] h[200px] cursor-pointer transition-opacity duration-500 ease-linear"
           />
         ))}
       </div>
