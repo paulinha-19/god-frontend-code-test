@@ -8,7 +8,7 @@ interface ScrollProps {
 export const Scroll = ({ cars }: ScrollProps) => {
   return (
     <div className="carousel h-60 w-2/5">
-      <div className="carouselbox h-60 w-auto overflow-hidden pb-2.5	flex items-center">
+      <div className="carouselbox h-60 w-auto overflow-hidden	flex items-center">
         {cars.map((car, index) => (
           <img
             key={car.id}

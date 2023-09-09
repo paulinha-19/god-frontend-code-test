@@ -9,16 +9,20 @@ interface CardProps {
 
 const CarsCard = ({ car }: CardProps) => {
   return (
-    <div className="px-5 hover:text-sky-700 cursor-pointer space-y-4">
-      <div className="flex flex-col space-y-4">
+    <div className="card-container px-3 hover:text-sky-700 cursor-pointer space-y-4">
+      <div className="flex flex-col space-y-2 mt-10">
         <p>{car.bodyType}</p>
         <div className="flex gap-4">
           <p className="font-semibold">{car.modelName}</p>
           <span className="text-gray-500">{car.modelType}</span>
         </div>
       </div>
-      <img src={car.imageUrl} alt={car.modelName} />
-      <div className="flex justify-center gap-4 mt-8">
+      <img
+        src={car.imageUrl}
+        alt={car.modelName}
+        className="w-full object-cover	"
+      />
+      <div className="flex justify-center gap-4">
         <button
           type="button"
           className="text-sky-700 font-semibold flex items-center hover:text-gray-800"
